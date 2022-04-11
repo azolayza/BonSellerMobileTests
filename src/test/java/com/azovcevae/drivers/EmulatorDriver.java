@@ -29,13 +29,13 @@ public class EmulatorDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
-        options.setDeviceName("Android11-6");
+        options.setDeviceName("emulator-5554");
         options.setPlatformVersion("11.0");
         options.setApp(app.getAbsolutePath());
         options.setLocale("en");
         options.setLanguage("en");
         options.setAppPackage("com.bonpass.seller.v2.dev");
-        options.setAppActivity("com.bonpass.seller.v2.dev.MainActivity");
+        options.setAppActivity("com.bonpass.seller.screens.login.LoginActivity");
 
         try {
             return new AndroidDriver(new URL("http://localhost:4723/wd/hub"), options);
