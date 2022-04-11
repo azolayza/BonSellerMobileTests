@@ -45,10 +45,10 @@ public class EmulatorDriver implements WebDriverProvider {
     }
 
     private File downloadApk() {
-        File apk = new File("src/test/resources/apk/app-alpha-universal-release.apk");
+        File apk = new File("src/test/resources/apk/bonseller-2.0.27-dev-release.apk");
         if (!apk.exists()) {
-            String url = "https://github.com/wikimedia/apps-android-wikipedia/" +
-                    "releases/download/latest/app-alpha-universal-release.apk?raw=true";
+            String url = "https://github.com/azolayza/BonSellerMobileTests/blob/" +
+                    "main/src/test/resources/apk/bonseller-2.0.27-dev-release.apk?raw=true";
             try (InputStream in = new URL(url).openStream()) {
                 copyInputStreamToFile(in, apk);
             }
@@ -59,3 +59,4 @@ public class EmulatorDriver implements WebDriverProvider {
         return apk;
     }
 }
+
